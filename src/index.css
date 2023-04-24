@@ -19,7 +19,7 @@ code {
 }
 
 @media (width: 780px) and (height: 1024px) {
-  .App {
+  /* .App {
     background-color: cyan;
-  }
+  } */
 }
