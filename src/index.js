@@ -8,6 +8,11 @@ import Media from "./pages/media/media";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* 
+      Maybe only call App
+      Giving App a grid layout.
+      App calls rest of components
+    */}
     <App />
     <h1 className="bg-gradient"> HELLO FRIENDS </h1>
     <div>Bacalhau à Braá/ IF</div>

@@ -13,6 +13,12 @@ class Media extends Component {
   };
 
   render() {
+    /*
+    Try to put inside this div:
+      <div class="grid grid-cols-4 gap-4">
+      
+      </div>
+    */
     return Object.entries(this.socialLinks).map(([name, [link, picture]]) => (
       <a key={name} href={link} target="_blank" rel="noreferrer">
         <div className="bg-gray-800 text-white p-4 rounded-lg text-center">
