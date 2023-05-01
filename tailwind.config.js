@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}", "./src/components/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   darkMode: "class",
   theme: {
-    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
     extend: {
       colors: {
         red_800: "#c8102e",
@@ -52,9 +53,6 @@ module.exports = {
         inter: "Inter",
         montserrat: "Montserrat",
         worksans: "Work Sans",
-      },
-      backgroundImage: {
-        gradient: "linear-gradient(0deg ,#0569c6f9,#1a85d4fc,#30a2e2)",
       },
     },
   },

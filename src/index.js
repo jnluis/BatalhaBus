@@ -14,9 +14,10 @@ root.render(
       App calls rest of components
     */}
     <App />
-    <h1 className="bg-gradient"> HELLO FRIENDS </h1>
-    <div>Bacalhau à Braá/ IF</div>
+    {/* <h1 className="bg-gradient"> HELLO FRIENDS </h1> */}
+    <h1> HELLO FRIENDS </h1>
+    <div>Bacalhau à Braá/ IF </div>
     <Media />
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>
 );

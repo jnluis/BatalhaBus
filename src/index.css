@@ -3,9 +3,13 @@
 @import "tailwindcss/utilities";
 
 body {
-  width: 1194;
-  height: 834;
-  margin: 0;
+  /* width: 1194; tamanhos para usar no f12 do browser
+  height: 834; tamanhos
+  margin: 0; */
+
+  height: 100vh;
+  background-image: linear-gradient(0deg ,#0569c6f9,#1a85d4fc,#30a2e2);
+  background-repeat: no-repeat;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
