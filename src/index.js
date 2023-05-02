@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Footer from "./components/Footer";
 import Media from "./pages/media/media";
+import Clock from "./components/Date";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +16,8 @@ root.render(
     */}
     <App />
     {/* <h1 className="bg-gradient"> HELLO FRIENDS </h1> */}
-    <h1> HELLO FRIENDS </h1>
+    <h1 className="meter aqui a hora. Isto talvez tenha de ser um componente para reutilizar"> HELLO FRIENDS </h1>
+    <Clock/>
     <div>Bacalhau à Braá/ IF </div>
     <Media />
     {/* <Footer /> */}
