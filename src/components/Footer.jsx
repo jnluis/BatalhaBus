@@ -1,80 +1,47 @@
-// import React, { Component } from "react";
-// import "../index.css";
+import React, { Component } from "react";
+import "../index.css";
 
-// class Footer extends Component {
-//   render() {
-//     let footerClass = "w-full bg-gray-800 text-white py-4";
-//     let partialClass =
-//       "max-w-6xl mx-auto px-4 flex justify-between items-center";
-//     let buttonClass = "text-lg font-medium rounded-full bg-white";
-
-//     return (
-//       <footer className={footerClass} style={{ position: "fixed", bottom: 0 }}>
-//         <div className={"static left-0 " + partialClass}>
-//           <button className={buttonClass}>Home</button>
-//           <button className={buttonClass}>Timetable</button>
-//         </div>
-//         <div className={"static right-0 " + partialClass}>
-//           <button className={buttonClass}>Flag</button>
-//           <button className={buttonClass}>Settings</button>
-//         </div>
-//       </footer>
-//     );
-//   }
-// }
-
-// export default Footer;
-
-const Footer = () => {
+function Navbar() {
   return (
-<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-    </a>
-    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-      <span class="sr-only">Open main menu</span>
-      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-        </li>
-        <li>
-            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-      
-            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                  </li>
-                </ul>
-                <div class="py-1">
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
-                </div>
-            </div>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  ) 
+    <nav className="fixed bottom-0 w-full shadow-lg flex justify-around items-center pb-10">
+      <button className="py-3 px-5 border-2 border-black text-black bg-white font-bold rounded-full text-lg">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M56.6591 33.7551C57.5618 33.677 58.3255 33.2865 58.9505 32.5835C59.5754 31.8805 59.9226 31.0213 59.992 30.0059C60.0614 28.9123 59.6795 27.975 58.8463 27.1939L53.3262 21.6872V7.51025C53.3262 6.41672 53.0138 5.51845 52.3888 4.81547C51.7639 4.11248 50.9654 3.76098 49.9933 3.76098H46.6604C45.6883 3.76098 44.8898 4.11248 44.2649 4.81547C43.64 5.51845 43.3275 6.41672 43.3275 7.51025V11.8453L32.2874 0.831869C31.593 0.285101 30.8639 0.0117165 30.1001 0.0117165C29.3364 -0.0663933 28.5726 0.246046 27.8088 0.949033L1.04153 27.1939C0.347176 27.975 0 28.9123 0 30.0059C0 31.0213 0.312458 31.8805 0.937375 32.5835C1.56229 33.2865 2.3608 33.677 3.33289 33.7551H6.66578V41.8395V42.191V55.3134C6.66578 56.6413 7.08239 57.7348 7.91561 58.594C8.6794 59.5313 9.65149 60 10.8319 60H12.4983H12.9149H13.1232H13.3316H16.6644H19.1641C20.3445 60 21.3166 59.5313 22.0804 58.594C22.9136 57.7348 23.3302 56.6413 23.3302 55.3134V52.5015V45.0029C23.3302 43.9094 23.6427 43.0111 24.2676 42.3081C24.8925 41.6052 25.691 41.2537 26.6631 41.2537H33.3289C34.301 41.2537 35.0995 41.6052 35.7244 42.3081C36.3493 43.0111 36.6618 43.9094 36.6618 45.0029V52.5015V55.3134C36.6618 56.6413 37.0784 57.7348 37.9116 58.594C38.6754 59.5313 39.6475 60 40.8279 60H43.3275H46.7646H47.1812H47.4937H49.1601C50.3405 60 51.3126 59.5313 52.0764 58.594C52.9096 57.7348 53.3262 56.6413 53.3262 55.3134V53.4388C53.3262 53.1263 53.3609 52.8139 53.4304 52.5015L53.3262 33.7551H56.6591Z" fill="black" />
+        </svg>
+        Home</button>
+      <button className="py-3 px-10 border-2 border-black text-black font-bold bg-white rounded-full text-lg">
+        <svg width="40" height="50" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.6328 4.68726C12.2864 14.1404 4.15704 29.9998 0.461894 47.4216L0 49.9998H4.89607C8.49885 49.9998 9.9769 49.6873 10.4388 48.8279C11.0855 47.2654 14.6882 47.2654 14.6882 48.8279C14.6882 49.6873 15.7968 49.9998 19.5843 49.9998H24.388V38.0466C24.4804 20.3904 27.7136 10.781 36.2125 3.28101L40 -0.000244141H33.903H27.806L22.6328 4.68726ZM29.9307 4.68726C27.8984 6.40601 25.8661 7.81226 25.4042 7.81226C24.8499 7.81226 26.3279 6.24976 28.545 4.29663C30.7621 2.42163 32.7945 1.01538 33.0716 1.17163C33.2564 1.40601 31.8707 2.96851 29.9307 4.68726ZM23.9261 11.2498C23.9261 11.406 23.0947 13.1248 22.0785 15.156C20.3233 18.4373 18.3834 19.9216 18.3834 17.9685C18.3834 16.4841 22.0785 10.9373 23.0023 10.9373C23.5566 10.9373 23.9261 11.0935 23.9261 11.2498ZM18.3834 23.0466C18.3834 23.2029 17.9215 25.156 17.3672 27.3435C16.7206 29.9216 15.8891 31.2498 14.9654 31.2498C13.9492 31.2498 13.6721 30.7029 14.1339 29.2185C14.5035 28.0466 15.0577 26.1716 15.3349 24.9216C15.612 23.6716 16.4434 22.656 17.0901 22.656C17.8291 22.656 18.3834 22.8123 18.3834 23.0466ZM15.612 36.0935C15.612 36.6404 15.3349 38.4373 15.0577 39.9998C14.5958 42.2654 14.0416 42.9685 12.6559 42.9685C11.1778 42.9685 10.9007 42.5779 11.3626 41.1716C11.6397 40.2341 11.9169 38.5154 11.9169 37.2654C11.9169 35.7029 12.3788 35.156 13.7644 35.156C14.7806 35.156 15.612 35.6248 15.612 36.0935Z" fill="black" />
+        </svg>
+        <h4>Trip</h4>
+        <h5>Details </h5>
+      </button>
+      <button className="py-2 px-4 border-4 border-green-700 text-black font-bold bg-white rounded-full text-lg">
+        <svg width="48" height="41" viewBox="0 0 48 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M48 20.5L-9.53674e-07 41L-9.53674e-07 0L48 20.5Z" fill="black" />
+        </svg>
+        Media
+      </button>
+      <button className="py-2 px-4 border-2 border-black text-black font-bold bg-white rounded-full text-lg">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M34.375 25C34.375 27.1479 34.2773 29.2307 34.082 31.2485H15.918C15.7227 29.2307 15.625 27.1479 15.625 25C15.625 22.8521 15.7227 20.7693 15.918 18.7515H34.082C34.2773 20.7693 34.375 22.8521 34.375 25ZM37.207 18.7515H49.2188C49.7396 20.7693 50 22.8521 50 25C50 27.1479 49.7396 29.2307 49.2188 31.2485H37.207C37.4023 29.2307 37.5 27.1479 37.5 25C37.5 22.8521 37.4023 20.7693 37.207 18.7515ZM48.1445 15.6273H36.8164C35.7747 9.24864 33.9518 4.30193 31.3477 0.787161C35.2539 1.89366 38.6719 3.71613 41.6016 6.25458C44.4661 8.85811 46.6471 11.9823 48.1445 15.6273ZM33.5938 15.6273H16.4062C16.9922 12.0474 17.8711 8.95574 19.043 6.35221C20.0846 4.07412 21.1589 2.41437 22.2656 1.37296C23.3724 0.396632 24.2839 -0.0589863 25 0.00610203C25.7161 -0.0589863 26.6276 0.396632 27.7344 1.37296C28.8411 2.41437 29.9154 4.07412 30.957 6.35221C32.1289 8.95574 33.0078 12.0474 33.5938 15.6273ZM13.1836 15.6273H1.85547C3.35286 11.9823 5.53385 8.85811 8.39844 6.25458C11.3281 3.71613 14.7461 1.89366 18.6523 0.787161C16.0482 4.30193 14.2253 9.24864 13.1836 15.6273ZM0.78125 18.7515H12.793C12.5977 20.7693 12.5 22.8521 12.5 25C12.5 27.1479 12.5977 29.2307 12.793 31.2485H0.78125C0.260417 29.2307 0 27.1479 0 25C0 22.8521 0.260417 20.7693 0.78125 18.7515ZM19.043 43.6478C17.8711 41.0443 16.9922 37.9526 16.4062 34.3727H33.5938C33.0078 37.9526 32.1289 41.0443 30.957 43.6478C29.9154 45.9259 28.8411 47.5856 27.7344 48.627C26.6276 49.6034 25.7161 50.059 25 49.9939C24.2839 50.059 23.3724 49.6034 22.2656 48.627C21.1589 47.5856 20.0846 45.9259 19.043 43.6478ZM13.1836 34.3727C14.2253 40.7514 16.0482 45.6981 18.6523 49.2128C14.7461 48.1063 11.3281 46.2839 8.39844 43.7454C5.53385 41.1419 3.35286 38.0177 1.85547 34.3727H13.1836ZM48.1445 34.3727C46.6471 38.0177 44.4661 41.1419 41.6016 43.7454C38.6719 46.2839 35.2865 48.1063 31.4453 49.2128C33.9844 45.6981 35.7747 40.7514 36.8164 34.3727H48.1445Z" fill="black" />
+        </svg>
+        Browser
+      </button>
+      <button className="py-2 px-4 border-2 border-black text-black font-bold bg-white rounded-full text-lg">
+        <svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30.0893V30.3571C0.0520833 33.0952 0.885417 35.3571 2.5 37.1429C4.0625 38.9881 6.04167 39.9405 8.4375 40C10.4167 39.9405 12.1354 39.256 13.5938 37.9464C15.1042 36.6369 16.0938 34.881 16.5625 32.6786L16.875 31.4286H33.125L33.4375 32.6786C33.9062 34.881 34.8958 36.6369 36.4062 37.9464C37.8646 39.256 39.5833 39.9405 41.5625 40C43.9583 39.9405 45.9375 38.9881 47.5 37.1429C49.1146 35.3571 49.9479 33.0952 50 30.3571V30.0893C50 29.5536 49.9479 29.0179 49.8438 28.4821L47.3438 11.4286C46.9792 9.10714 46.1979 7.11309 45 5.44643C43.8021 3.72024 42.2135 2.55952 40.2344 1.96429C36.6406 0.833333 31.5625 0.178571 25 0C18.4375 0.178571 13.3594 0.833333 9.76562 1.96429C7.78646 2.55952 6.19792 3.72024 5 5.44643C3.80208 7.11309 3.02083 9.10714 2.65625 11.4286L0.15625 28.4821C0.0520833 29.0179 0 29.5536 0 30.0893ZM33.75 25C32.8646 25 32.1354 24.6429 31.5625 23.9286C30.9375 23.2738 30.625 22.4405 30.625 21.4286C30.625 20.4167 30.9375 19.5833 31.5625 18.9286C32.1354 18.2143 32.8646 17.8571 33.75 17.8571C34.6354 17.8571 35.3646 18.2143 35.9375 18.9286C36.5625 19.5833 36.875 20.4167 36.875 21.4286C36.875 22.4405 36.5625 23.2738 35.9375 23.9286C35.3646 24.6429 34.6354 25 33.75 25ZM41.875 12.8571C41.875 13.869 41.5625 14.7024 40.9375 15.3571C40.3646 16.0714 39.6354 16.4286 38.75 16.4286C37.8646 16.4286 37.1354 16.0714 36.5625 15.3571C35.9375 14.7024 35.625 13.869 35.625 12.8571C35.625 11.8452 35.9375 11.0119 36.5625 10.3571C37.1354 9.64286 37.8646 9.28571 38.75 9.28571C39.6354 9.28571 40.3646 9.64286 40.9375 10.3571C41.5625 11.0119 41.875 11.8452 41.875 12.8571ZM16.875 12.1429V15H19.375C20.5208 15.119 21.1458 15.8333 21.25 17.1429C21.1458 18.4524 20.5208 19.1667 19.375 19.2857H16.875V22.1429C16.7708 23.4524 16.1458 24.1667 15 24.2857C13.8542 24.1667 13.2292 23.4524 13.125 22.1429V19.2857H10.625C9.47917 19.1667 8.85417 18.4524 8.75 17.1429C8.85417 15.8333 9.47917 15.119 10.625 15H13.125V12.1429C13.2292 10.8333 13.8542 10.119 15 10C16.1458 10.119 16.7708 10.8333 16.875 12.1429Z" fill="black" />
+        </svg>
+        Games
+      </button>
+      <button className="py-1 px-2 border-2 border-black bg-white rounded-full absolute right-4 bottom-2"><svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32.9272 11.416C33.106 12.054 32.9719 12.6009 32.5249 13.0566L29.5747 15.791C29.6641 16.3379 29.7088 16.9076 29.7088 17.5C29.7088 18.0924 29.6641 18.6621 29.5747 19.209L32.5249 21.9434C32.9719 22.3991 33.106 22.946 32.9272 23.584C32.6143 24.4043 32.2567 25.2018 31.8544 25.9766L31.5191 26.5234C31.0721 27.2526 30.5804 27.959 30.044 28.6426C29.597 29.1439 29.0606 29.3034 28.4348 29.1211L24.68 27.8906C23.786 28.6198 22.8026 29.1895 21.7298 29.5996L20.9252 33.5645C20.7464 34.2025 20.3218 34.5898 19.6513 34.7266C18.7573 34.9089 17.8186 35 16.8352 35C15.8518 35 14.8908 34.9089 13.9521 34.7266C13.3263 34.5898 12.924 34.2025 12.7452 33.5645L11.9406 29.5996C10.8678 29.1895 9.88438 28.6198 8.99038 27.8906L5.23559 29.1211C4.60979 29.3034 4.07339 29.1439 3.6264 28.6426C3.0453 27.959 2.5536 27.2526 2.1513 26.5234L1.81605 25.9766C1.41375 25.2018 1.05615 24.4271 0.743254 23.6523C0.564455 22.9688 0.698554 22.3991 1.14555 21.9434L4.09574 19.2773C4.00635 18.6849 3.96165 18.0924 3.96165 17.5C3.96165 16.9076 4.00635 16.3379 4.09574 15.791L1.14555 13.0566C0.698554 12.6009 0.564455 12.054 0.743254 11.416C1.05615 10.5957 1.41375 9.79818 1.81605 9.02344L2.1513 8.47656C2.5536 7.7474 3.0453 7.04102 3.6264 6.35742C4.07339 5.85612 4.60979 5.69661 5.23559 5.87891L8.99038 7.10938C9.88438 6.38021 10.8678 5.78776 11.9406 5.33203L12.7452 1.43555C12.924 0.797526 13.3486 0.410156 14.0191 0.273438C14.9131 0.0911458 15.8518 0 16.8352 0C17.8186 0 18.7797 0.0911458 19.7183 0.273438C20.3441 0.410156 20.7464 0.797526 20.9252 1.43555L21.7298 5.33203C22.8026 5.78776 23.786 6.38021 24.68 7.10938L28.4348 5.87891C29.0606 5.69661 29.597 5.85612 30.044 6.35742C30.6251 7.04102 31.1392 7.7474 31.5862 8.47656L31.8544 9.02344C32.2567 9.79818 32.6143 10.5957 32.9272 11.416ZM16.8352 22.9688C18.355 22.9232 19.629 22.3991 20.657 21.3965C21.6404 20.3483 22.1545 19.0495 22.1992 17.5C22.1545 15.9505 21.6404 14.6517 20.657 13.6035C19.629 12.6009 18.355 12.0768 16.8352 12.0312C15.3154 12.0768 14.0415 12.6009 13.0134 13.6035C12.03 14.6517 11.5159 15.9505 11.4712 17.5C11.5159 19.0495 12.03 20.3483 13.0134 21.3965C14.0415 22.3991 15.3154 22.9232 16.8352 22.9688Z" fill="black" />
+      </svg>
+      </button>
+
+
+    </nav>
+  );
 }
-export default Footer;
+
+export default Navbar;
