@@ -14,11 +14,8 @@ root.render(
       Giving App a grid layout.
       App calls rest of components
     */}
-    <App />
-    {/* <h1 className="bg-gradient"> HELLO FRIENDS </h1> */}
-    <h1 className="meter aqui a hora. Isto talvez tenha de ser um componente para reutilizar"> HELLO FRIENDS </h1>
+    <App className="isto talvez seja sempre necessário, porque senão a pagina fica scrollable" />
     <Clock/>
-    <div>Bacalhau à Braá/ IF </div>
     <Media />
     <Footer />
   </React.StrictMode>
