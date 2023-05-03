@@ -20,6 +20,6 @@ root.render(
     <Clock/>
     <div>Bacalhau à Braá/ IF </div>
     <Media />
-    {/* <Footer /> */}
+    <Footer />
   </React.StrictMode>
 );
