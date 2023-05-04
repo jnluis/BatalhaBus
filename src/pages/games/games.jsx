@@ -20,7 +20,7 @@ function Games() {
     if (name === "Jogo do Galo" || name === "Chess") {
       setIsModalOpen(true);
       setModalMessage("Jogo não disponível");
-      setTimeout(() => setIsModalOpen(false), 2000);
+      setTimeout(() => setIsModalOpen(false), 1000);
     }
   };
 
@@ -36,7 +36,7 @@ function Games() {
             <img
               src={picture}
               alt={name}
-              className="mx-auto mb-2 h-36 mb-10"
+              className="mx-auto mb-2 h-36"
             />
             <span className="text-lg font-medium">{name}</span>
           </div>
