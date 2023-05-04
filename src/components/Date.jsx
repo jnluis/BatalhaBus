@@ -48,7 +48,7 @@ function Clock() {
   const month = months[date.getMonth()];
   const year = date.getFullYear(); // vai buscar o ano mas não tamos a usar
   const hours = date.getHours();
-  const minutes = date.getMinutes();
+  const minutes = date.getMinutes().toString().padStart(2, "0");;
   const seconds = date.getSeconds(); // vai buscar os segundos mas não tamos a usar
 
   return (
