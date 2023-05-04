@@ -29,14 +29,14 @@ function Games() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {Object.entries(socialLinks).map(([name, [link, picture]]) => (
           <div
-            key={name}
-            onClick={() => handleClick(name)}
-            className=" text-white p-4 rounded-lg text-center cursor-pointer"
+          key={name}
+            className=" text-white p-4 text-center"
           >
             <img
               src={picture}
-              alt={name}
-              className="mx-auto mb-2 h-36"
+              alt={name} 
+              onClick={() => handleClick(name)}
+              className="mx-auto mb-2 h-36 cursor-pointer"
             />
             <span className="text-lg font-medium">{name}</span>
           </div>
