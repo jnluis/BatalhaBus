@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="Esta div é só porque tem de ter um parent">
       <Clock />
-      <BrowserRouter>
+      
         <Routes>
 
           <Route path="/" element={<Media />} />
@@ -17,7 +17,7 @@ function App() {
 
 
         </Routes>
-      </BrowserRouter>
+    
 
       <Footer />
 
