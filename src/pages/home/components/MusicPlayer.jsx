@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Play, Pause, FastForward } from "react-feather";
-import { ProgressBar } from "react-bootstrap";
 import { Image } from "daisyui";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import { makeStyles } from '@mui/material/styles';
+import LinearProgress from '@mui/material/LinearProgress';
+import Button from '@mui/material/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,6 +38,11 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
   },
+  progressBar: {
+    flexGrow: 1,
+    marginLeft: theme.spacing(2),
+    height: "4px",
+  },
 }));
 
 function MusicPlayer({ song, artist, image, duration, progress, onPlayPause, onFastForward }) {
@@ -64,9 +69,10 @@ function MusicPlayer({ song, artist, image, duration, progress, onPlayPause, onF
           <FastForward />
         </Button>
       </div>
-      <div>
-        <ProgressBar now={progress} label={`${duration}s`} />
+      <div className={classes.progressBar}>
+        <LinearProgress variant="determinate" value={progress} />
       </div>
+      <div>{`${duration}s`}</div>
     </div>
   );
 }
