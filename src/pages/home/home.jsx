@@ -15,6 +15,7 @@ function Home() {
     <div className="fixed top-[370px] right-10 h-200 flex flex-col justify-center items-center">
     <Slider />
     </div>
+    <div>
     <MusicPlayer
   song="Shape of You"
   artist="Ed Sheeran"
@@ -24,6 +25,8 @@ function Home() {
   onPlayPause={(isPlaying) => console.log(`isPlaying: ${isPlaying}`)}
   onFastForward={() => console.log("fast forwarding")}
 />
+    </div>
+
     </>
   );
 }
