@@ -27,12 +27,12 @@ function Navbar() {
   return (
     <nav className="grid grid-cols-5 fixed bottom-0 w-full shadow-lg flex items-center pb-10">
       <Link to="/"> 
-      <HomeButton className={isHomePage ? 'border-4 border-green-700' : ''}/>
+      <HomeButton className={isHomePage ? "border-4 border-green-700" : ""}/>
       </Link>
       {!isHomePage && <TripDetailsButton />}
       {!isHomePage && (
         <Link to="/media"> 
-          <MediaButton className={isHomePage ? 'border-4 border-green-700' : 'border-2 border-black'}/>
+          <MediaButton className={isMediaPage ? 'border-4 border-green-700' : 'border-2 border-black'}/>
         </Link>
       )}
       {!isHomePage && (

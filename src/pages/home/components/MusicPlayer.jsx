@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useSound from "use-sound";
 import Music from "../../../assets/OLimpaChamines.mp3"
 import { PlayArrow, Pause, FastForward } from '@mui/icons-material';
-import "./index.css";
+import "./MusicPlayer.css";
 import jonyclaras from "../../../assets/jonyclaras.jpg"
 
 export default function Player() {
