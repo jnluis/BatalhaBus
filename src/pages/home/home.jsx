@@ -11,7 +11,7 @@ function Home() {
   const buttonStyle = {
     width: '142px',
     height: '127px',
-    margin: '0 120px',
+    margin: '0 40px',
     borderRadius: '10px',
     backgroundColor: '#E6B78C',
     color: 'black',
@@ -28,7 +28,7 @@ function Home() {
     display: 'flex',
     justifyContent: 'center',
     position: 'relative',
-    top : '425px'
+    top : '300px'
   }
 
   return (
