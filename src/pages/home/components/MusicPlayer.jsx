@@ -1,40 +1,111 @@
-import { useState } from "react";
-import {PlayArrow, Pause, FastForward} from '@mui/icons-material';
-import { Image } from "daisyui";
-import LinearProgress from '@mui/material/LinearProgress';
-import Button from '@mui/material/Button';
+import { useEffect, useState } from "react";
+import useSound from "use-sound";
+import Music from "../../../assets/OLimpaChamines.mp3"
+import { PlayArrow, Pause, FastForward } from '@mui/icons-material';
+import "./index.css";
+import jonyclaras from "../../../assets/jonyclaras.jpg"
 
-function MusicPlayer({ song, artist, image, duration, progress, onPlayPause, onFastForward }) {
+export default function Player() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [time, setTime] = useState({
+    min: "",
+    sec: ""
+  });
+  const [currTime, setCurrTime] = useState({
+    min: "",
+    sec: ""
+  });
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-    onPlayPause(!isPlaying);
+  const [seconds, setSeconds] = useState(0);
+
+  const [play, { pause, duration, sound }] = useSound(Music);
+
+  useEffect(() => {
+    if (duration) {
+      const sec = duration / 1000;
+      const min = Math.floor(sec / 60);
+      const secRemain = Math.floor(sec % 60);
+      setTime({
+        min: min,
+        sec: secRemain
+      });
+    }
+  }, [isPlaying]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (sound) {
+        setSeconds(sound.seek([]));
+        const min = Math.floor(sound.seek([]) / 60);
+        const sec = Math.floor(sound.seek([]) % 60);
+        setCurrTime({
+          min,
+          sec
+        });
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [sound]);
+
+  const playingButton = () => {
+    if (isPlaying) {
+      pause();
+      setIsPlaying(false);
+    } else {
+      play();
+      setIsPlaying(true);
+    }
   };
 
+    // Helper function to add leading zeros to a number
+    const addLeadingZero = (num) => {
+      return num < 10 ? "0" + num : num.toString();
+    }
+
   return (
-    <div >
-      <div >
-        <Image src={image} rounded />
-      </div>
-      <div >
-        <div >{artist}</div>
-        <div >{song}</div>
-      </div>
+    <div className="component">
+      <img className="musicCover" src={jonyclaras} />
       <div>
-        <Button onClick={togglePlayPause}>{isPlaying ? <Pause /> : <PlayArrow />}</Button>
-        <Button onClick={onFastForward}>
-          <FastForward />
-        </Button>
+        <div className="time">
+
+           <p>
+            {addLeadingZero(currTime.min)}:{addLeadingZero(currTime.sec)}
+          </p>
+          <input
+          type="range"
+          min="0"
+          max={duration / 1000}
+          default="0"
+          value={seconds ?? 0}
+          className="timeline22"
+          onChange={(e) => {
+            sound.seek([e.target.value]);
+          }}
+          />
+          <p>
+            {addLeadingZero(time.min)}:{addLeadingZero(time.sec)}
+          </p>   
+        </div >
+        <div>
+        <p className="subTitle">O Limpa Chaminés</p>
+        <h3 className="title">João Claro</h3>
       </div>
-      <div>
-        <LinearProgress variant="determinate" value={progress} />
       </div>
-      <div>{`${duration}s`}</div>
+      <div className="buttons">
+        {!isPlaying ? (
+          <button className="playButton" onClick={playingButton} >
+            <PlayArrow sx={{ color: "#191D23", fontSize: 27 }} />
+          </button>
+        ) : (
+          <button className="playButton" onClick={playingButton}>
+            <Pause sx={{ color: "#191D23", fontSize: 27 }} />
+          </button>
+        )}
+        <button className="FastForward">
+          <FastForward sx={{ color: "#191D23", fontSize: 27 }} />
+        </button>
+      </div>
     </div>
   );
 }
-
-export default MusicPlayer;
-
 
