@@ -29,7 +29,11 @@ function Navbar() {
       <Link to="/"> 
       <HomeButton className={isHomePage ? "border-4 border-green-700" : ""}/>
       </Link>
-      {!isHomePage && <TripDetailsButton />}
+      {!isHomePage && (
+        <Link to="/trip-details"> 
+          <TripDetailsButton className={isTripDetailsPage ? 'border-4 border-green-700' : 'border-2 border-black'}/>
+        </Link>
+      )}
       {!isHomePage && (
         <Link to="/media"> 
           <MediaButton className={isMediaPage ? 'border-4 border-green-700' : 'border-2 border-black'}/>

@@ -6,6 +6,7 @@ import Clock from "./components/Date";
 import Games from "./pages/games/games";
 import Browser from "./pages/browser/browser";
 import Home from "./pages/home/home";
+import TripDetails from "./pages/trip-details/TripDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/browser" element={<Browser/>} />
           <Route path="/games" element={<Games />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path ="/trip-details" element={<TripDetails/>} />
 
 
         </Routes>

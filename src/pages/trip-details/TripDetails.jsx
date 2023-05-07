@@ -1,0 +1,43 @@
+import React, { useEffect } from 'react';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+function TripDetails() {
+  useEffect(() => {
+    // create a new map instance
+    const map = L.map('map').setView([40.6894, -8.4629], 14);
+
+    // add a tile layer to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+    }).addTo(map);
+
+    // add a marker to the map
+    const myIcon = L.icon({
+        iconUrl: icon,
+        shadowUrl: iconShadow,
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        tooltipAnchor: [16, -28],
+        shadowSize: [41, 41]
+      });
+    L.marker([40.68662, -8.46908],{ icon: myIcon }).addTo(map)
+      
+      
+
+    // return cleanup function to remove the map instance
+    return () => {
+      map.remove();
+    };
+  }, []);
+
+  return (
+    <div id="map" style={{ height: '400px', width: '40%' , borderRadius: '10px', left: '50px' }}>
+    </div>
+  );
+}
+
+export default TripDetails;

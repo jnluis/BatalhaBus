@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 
 export default function ContinuousSlider() {
-  const [value, setValue] = React.useState(10);
+  const [value, setValue] = React.useState(20);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

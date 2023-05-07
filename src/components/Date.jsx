@@ -54,7 +54,7 @@ function Clock() {
   return (
     <div className="text-white font-semibold flex text-xl mt-[40px]">
       
-      <div className="ml-52 mr-16 mb-16 ">
+      <div className="ml-32 mr-16 mb-16 ">
         {hours}:{minutes}
       </div>
       <div className="mr-2">
