@@ -27,7 +27,7 @@ function Navbar() {
   return (
     <nav className="grid grid-cols-5 fixed bottom-0 w-full shadow-lg flex items-center pb-10">
       <Link to="/"> 
-      <HomeButton className={isHomePage ? "border-4 border-green-700" : ""}/>
+      <HomeButton className={isHomePage ? "border-4 border-green-700" : 'border-2 border-black'}/>
       </Link>
       {!isHomePage && (
         <Link to="/trip-details"> 
@@ -41,7 +41,7 @@ function Navbar() {
       )}
       {!isHomePage && (
         <Link to="/browser"> 
-          <BrowserButton className={isBrowserPage ? 'border-4 border-green-700' : ''} />
+          <BrowserButton className={isBrowserPage ? 'border-4 border-green-700' : 'border-2 border-black'} />
         </Link>
       )}
       {isHomePage && (
@@ -49,11 +49,11 @@ function Navbar() {
       )}
       {!isHomePage && (
         <Link to="/games"> 
-          <GamesButton />
+          <GamesButton className={isGamesPage ? 'border-4 border-green-700' : 'border-2 border-black'}/>
         </Link>
       )}
       <Link to="/settings">
-      <SettingsButton className={isSettingsPage ? 'border-4 border-green-700' : ''} />
+      <SettingsButton className={isSettingsPage ? 'border-4 border-green-700' : 'border-2 border-black'} />
       </Link>
 
     </nav>
