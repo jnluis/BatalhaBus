@@ -21,7 +21,8 @@ const socialLinks = {
 
 function Media() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    <div className="mr-20 scale-[0.85]">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 m-0">
       {Object.entries(socialLinks).map(([name, [link, picture]]) => (
         <div key={name} className=" text-white p-4 text-center">
           <a href={link} target="_blank" rel="noreferrer">
@@ -32,6 +33,7 @@ function Media() {
         </div>
 
       ))}
+    </div>
     </div>
   );
 }

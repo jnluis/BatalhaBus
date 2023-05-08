@@ -78,6 +78,7 @@ export default function Player() {
           default="0"
           value={seconds ?? 0}
           className="timeline22"
+          sytle={{zindex: 100}}
           onChange={(e) => {
             sound.seek([e.target.value]);
           }}

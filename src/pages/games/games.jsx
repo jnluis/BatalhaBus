@@ -24,9 +24,14 @@ function Games() {
     }
   };
 
+  const gridStyle = {
+    margin: 0,
+    marginLeft: 19,
+  };
+
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4" style={gridStyle}>
         {Object.entries(socialLinks).map(([name, [link, picture]]) => (
           <div
           key={name}
@@ -36,9 +41,10 @@ function Games() {
               src={picture}
               alt={name} 
               onClick={() => handleClick(name)}
-              className="mx-auto mb-2 h-36 cursor-pointer"
+              className="mx-auto px-0 mb-2 h-36 cursor-pointer"
+              style={gridStyle}
             />
-            <span className="text-lg font-medium">{name}</span>
+            <span className="text-lg font-medium" style={{ marginRight: 89}}>{name}</span>
           </div>
         ))}
       </div>

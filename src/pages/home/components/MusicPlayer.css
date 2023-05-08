@@ -2,9 +2,10 @@
   width: 500px;
   max-width: 600px;
   max-height: 110px;
-  margin: 1em auto;
+  /* margin: 1em auto; */
   border: 0.1px solid black; /* delete this to remove black border */
   display: flex;
+  margin-left: 155px; 
 }
 
 .musicCover {
@@ -76,17 +77,31 @@
 }
 
 input[type="range"] {
-  background-color: #27ae60;
-  color: #27ae60;
   height: 10px;
   --thumb-color: #fff;
 
-  /* Change the color of the active part of the track */
-  --track-active-color: #fff;
+}
 
-  /* Change the color of the background of the track */
-  --track-background-color: #fff;
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #E7EAEE;
+}
 
-  /* Change the color of the border around the track */
-  --track-border-color: #fff;
+input[type="range"]::-moz-range-track {
+  background-color: #E7EAEE;
+}
+
+input[type="range"]::-ms-track {
+  background-color: #E7EAEE;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #10B981;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #10B981;
+}
+
+input[type="range"]::-ms-track {
+  background-color: #10B981;
 }
