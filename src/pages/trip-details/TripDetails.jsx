@@ -3,6 +3,8 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import DropDown from './components/DropDown';
+
 
 function TripDetails() {
   useEffect(() => {
@@ -35,8 +37,18 @@ function TripDetails() {
   }, []);
 
   return (
-    <div id="map" style={{ height: '400px', width: '40%' , borderRadius: '10px', left: '50px' }}>
+
+    <div className='flex'>
+    <div>
+    <h1 style={{color:"#fff", marginTop:-30, fontSize:24, marginLeft: 120}}>Current location:</h1>
+    <div id="map" style={{ height: '455px', width: '460px' , borderRadius: '10px', left: '120px' }}>
     </div>
+    </div>
+     <div className="ml-[280px] mt-[180px]"> {/* mexer aqui quando se acrescentar o botão do TRIP ID */}
+    <DropDown />
+    </div>
+  </div>
+ 
   );
 }
 

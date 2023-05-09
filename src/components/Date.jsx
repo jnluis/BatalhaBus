@@ -52,7 +52,7 @@ function Clock() {
   const seconds = date.getSeconds(); // vai buscar os segundos mas não tamos a usar
 
   return (
-    <div className="text-white font-semibold flex text-xl mt-[40px]">
+    <div className="text-white font-semibold flex text-xl mt-[30px]">
       
       <div className="ml-32 mr-16 mb-16 ">
         {hours}:{minutes}

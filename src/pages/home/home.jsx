@@ -30,7 +30,7 @@ function Home() {
     display: "flex",
     marginLeft: "85px",
     position: "relative",
-    top: "70px",
+    top: "85px",
   };
 
   return (
