@@ -44,11 +44,15 @@ function TripDetails() {
     <div id="map" style={{ height: '455px', width: '460px' , borderRadius: '10px', left: '120px' }}>
     </div>
     </div>  
-     <div className="ml-[290px] mt-[5px] text-[24px]"> {/* mexer aqui quando se acrescentar o botão do TRIP ID */}
-     <span className="text-white font-semibold ml-[40px] mt-[40px]">
-      Check Trip Details: 
+     <div className="ml-[290px] text-[24px]"> {/* mexer aqui quando se acrescentar o botão do TRIP ID */}
+     <span className="text-white font-semibold  mt-[30px] ">
+      Want to get information 
+      <br/>
+      about your full trip? <br/>
+      <br/>
     </span>
-     <button className="font-bold w-[274px] h-[64px] text-white text-[24px] bg-[#259D49] border-[#3ED26A] border-4 rounded-[10px]">INSERT TICKET ID</button>
+    
+     <button className="font-bold w-[274px] h-[80px] text-white text-[24px] bg-[#259D49] border-[#3ED26A] border-4 rounded-[10px]">CHECK YOUR TRIP DETAILS</button>
     <DropDown/>
     </div>
   </div>

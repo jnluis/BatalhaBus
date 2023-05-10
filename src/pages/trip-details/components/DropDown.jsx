@@ -4,7 +4,7 @@ import {ExpandMore } from '@mui/icons-material';
 
 export default function dropdown() {
     return (
-        <div className="dropdown" style={{marginTop:80, marginLeft:-10}}>
+        <div className="dropdown" style={{marginTop:50, marginLeft:-10}}>
 
              <label tabIndex={0} className="btn m-1" style={{textTransform: "none", fontSize:20, backgroundColor: "#ffffff8f",color: "#000000bf"}}>
              <img src={image} alt="MapIcon" className="mr-5"/>
