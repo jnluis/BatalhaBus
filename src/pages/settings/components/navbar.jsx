@@ -1,13 +1,13 @@
 import React, { Component } from "react";
+import NavbarTitles from "./navbarTitles";
 
-function Navbar() {
-  return (
-    <div className="flex flex-col">
-      <div className="Header">Title</div>
-      <div>Settings1</div>
-      <div>Settings2</div>
-    </div>
-  );
+function Navbar(props) {
+  const navbarTitles = [];
+  props.titles.forEach((title, index) => {
+    navbarTitles.push(<NavbarTitles key={index} title={title} />);
+  });
+
+  return <div className="flex flex-col ">{navbarTitles}</div>;
 }
 
 export default Navbar;
