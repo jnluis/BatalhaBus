@@ -44,7 +44,7 @@ function TripDetails() {
     <div id="map" style={{ height: '455px', width: '460px' , borderRadius: '10px', left: '120px' }}>
     </div>
     </div>  
-     <div className="ml-[290px] text-[24px]"> {/* mexer aqui quando se acrescentar o botão do TRIP ID */}
+     <div className="ml-[290px] text-[24px]"> {/* mexer aquaaaaai quando se acrescentar o botão do TRIP ID */}
      <span className="text-white font-semibold  mt-[30px] ">
       Want to get information 
       <br/>
