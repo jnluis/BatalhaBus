@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-function Navbar() {
+function Settings() {
   return (
     <div className="flex flex-col">
       <div className="Header">Title</div>
@@ -10,4 +10,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Settings;
