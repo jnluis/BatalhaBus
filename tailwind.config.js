@@ -1,9 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   plugins: [require("daisyui")],
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -54,6 +52,9 @@ module.exports = {
         inter: "Inter",
         montserrat: "Montserrat",
         worksans: "Work Sans",
+      },
+      spacing: {
+        128: "32rem",
       },
     },
   },
