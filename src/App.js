@@ -7,6 +7,7 @@ import Games from "./pages/games/games";
 import Browser from "./pages/browser/browser";
 import Home from "./pages/home/home";
 import TripDetails from "./pages/trip-details/TripDetails";
+import TicTacToe from "./pages/Jogo_Galo/components/TicTacToe";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/games" element={<Games />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path ="/trip-details" element={<TripDetails/>} />
+          <Route path ="/JogoGalo" element = {<TicTacToe/>} />
 
 
         </Routes>
