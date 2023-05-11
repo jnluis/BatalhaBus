@@ -1,7 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import Bus from "./Icons/Bus";
+import Seat from "./Icons/Seat";
+import Switch from "./Icons/Switch";
 import Modal from "@mui/material/Modal";
 
 const style = {
@@ -30,13 +32,60 @@ export default function BasicModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+        <Box sx={{ ...style, BorderRadius: "60px" }}>
+          <h1>My Route</h1>
+          <div className="flex flex-nowrap flex-row mb-4">
+            <div className="basis-full">
+              <span>
+                From: <u>Oliveira de Frades</u> to <u>Batalha</u>
+              </span>
+            </div>
+          </div>
+          <div className="border-l-4 border-dashed border-sky-500 ml-4 pl-2 flex flex-col">
+            <span className="basis-full mb-4">
+              Partida <u>Oliveira de Frades</u>
+            </span>
+
+            <span className="mb-4">Hora prevista: 23h15</span>
+
+            <div className="basis-full flex mb-8">
+              <span className="basis-1/6">
+                <Bus />
+              </span>
+              <span className="basis-1/3">Viatura 5 </span>
+              <span className="basis-1/6">
+                <Seat />
+              </span>
+              <span className="basis-1/3">Lugar 45</span>
+            </div>
+
+            <div className="basis-full mb-4">
+              <span className="basis-1/6">
+                <Switch />
+              </span>
+              <span className="basis-2/3">
+                Ligação: <u>Coimbra B</u>
+              </span>
+            </div>
+
+            <span className="mb-4 mb-4">Hora prevista: 01h00</span>
+
+            <div className="basis-full flex mb-8">
+              <span className="basis-1/6">
+                <Bus />
+              </span>
+              <span className="basis-1/3">Viatura 2 </span>
+              <span className="basis-1/6">
+                <Seat />
+              </span>
+              <span className="basis-1/3">Lugar 25</span>
+            </div>
+
+            <span className="mb-4"> Chegada Prevista: 02h15 </span>
+            <span className="mb-4">
+              <u>Batalha</u>
+            </span>
+          </div>
         </Box>
       </Modal>
     </div>

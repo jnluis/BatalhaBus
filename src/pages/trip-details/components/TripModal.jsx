@@ -9,10 +9,9 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 300,
   bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
+  border: "6px solid #000",
   pt: 2,
   px: 4,
   pb: 3,
@@ -41,7 +40,7 @@ export default function TripModal() {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 400 }}>
+        <Box sx={{ ...style, width: 400, BorderRadius: "60px" }}>
           <h1>My Full Trip</h1>
           <p>Insert your ticket ID here:</p>
           <input
