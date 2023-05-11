@@ -25,7 +25,12 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button
+        onClick={handleOpen}
+        className="rounded-full bg-green-800 mb-4 border"
+      >
+        Add Me
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -34,15 +39,15 @@ export default function BasicModal() {
       >
         <Box sx={{ ...style, BorderRadius: "60px" }}>
           <h1>My Route</h1>
-          <div className="flex flex-nowrap flex-row mb-4">
+          <div className="flex flex-nowrap flex-row mb-8">
             <div className="basis-full">
               <span>
                 From: <u>Oliveira de Frades</u> to <u>Batalha</u>
               </span>
             </div>
           </div>
-          <div className="border-l-4 border-dashed border-sky-500 ml-4 pl-2 flex flex-col">
-            <span className="basis-full mb-4">
+          <div className="border-l-4 border-dashed border-sky-500 ml-4 pl-4 flex flex-col">
+            <span className="basis-full mb-1">
               Partida <u>Oliveira de Frades</u>
             </span>
 
@@ -59,7 +64,7 @@ export default function BasicModal() {
               <span className="basis-1/3">Lugar 45</span>
             </div>
 
-            <div className="basis-full mb-4">
+            <div className="basis-full mb-1">
               <span className="basis-1/6">
                 <Switch />
               </span>
@@ -81,10 +86,10 @@ export default function BasicModal() {
               <span className="basis-1/3">Lugar 25</span>
             </div>
 
-            <span className="mb-4"> Chegada Prevista: 02h15 </span>
-            <span className="mb-4">
-              <u>Batalha</u>
+            <span className="mb-1">
+              Chegada <u>Batalha</u>
             </span>
+            <span className="mb-4">Hora Prevista: 02h15 </span>
           </div>
         </Box>
       </Modal>

@@ -25,11 +25,11 @@ export default function TripModal() {
   const handleClose = () => {
     setOpen(false);
   };
-  
+
   return (
     <div>
       <button
-        className="font-bold w-[274px] h-[64px] text-white text-[24px] bg-[#259D49] border-[#3ED26A] border-4 rounded-[10px]"
+        className="font-bold w-[274px] h-[64px] text-black text-[24px] bg-[#259D49] border-[#3ED26A] border-4 rounded-[10px]"
         onClick={handleOpen}
       >
         INSERT TICKET ID
@@ -41,19 +41,27 @@ export default function TripModal() {
         aria-describedby="parent-modal-description"
       >
         <Box sx={{ ...style, width: 400, BorderRadius: "60px" }}>
-          <h1>My Full Trip</h1>
-          <p>Insert your ticket ID here:</p>
+          <h1
+            style={{ fontSize: "24px", color: "black", fontWeight: "Bold" }}
+            className="mb-2"
+          >
+            My Full Trip
+          </h1>
+          <p className="mb-2" style={{ color: "black" }}>
+            Insert your ticket ID here:
+          </p>
           <input
             type="text"
             id="TicketID"
             name="fname"
-            defaultValue={"Ticket ID"}
+            placeholder={"Ticket ID"}
+            className="mb-2 bg-blue-200 rounded-[10px] border border-black pl-2 ml-4"
+            style={{ color: "black" }}
           ></input>
-          <p>
+          <p className="mb-2" style={{ color: "gray", fontSize: "14px" }}>
             Tip: You can find your ticket ID in the from of the ticket below the
             QR code
           </p>
-          <button>Add</button>
           <ChildModal />
         </Box>
       </Modal>
