@@ -2,27 +2,29 @@ import React from "react";
 import NavbarTitles from "./components/navbarTitles";
 import Settings from "./components/settings";
 import Navbar from "./components/navbar.jsx";
+import Off from "./components/Icons/Off.jsx";
+import On from "./components/Icons/On.jsx";
 
 function SettingsPage() {
   const values = {
     Appearance: {
       Theme: "Blue",
       Brightness: "50%",
-      NightLight: "Off",
+      NightLight: <Off />,
     },
     TextNFont: {
       Font: "Arial",
       FontSize: "14px",
-      ReadAloud: "Off",
+      ReadAloud: <Off />,
     },
     Accessibility: {
-      ColourBlindMode: "Off",
-      UnderlineLinks: "On",
+      ColourBlindMode: <Off />,
+      UnderlineLinks: <On />,
     },
     SoundNVideo: {
       Volume: "50%",
-      Mute: "Off",
-      AutoPlay: "Off",
+      Mute: <Off />,
+      AutoPlay: <Off />,
       OutputDevice: "Speakers",
     },
   };
@@ -33,19 +35,19 @@ function SettingsPage() {
     Object.entries(values[category]).forEach(([setting, value], index) => {
       if (typeof value === "string") {
         settings.push(
-          <div key={index}>
+          <div key={index} className="my-1.5">
             <span>{setting}: </span>
             <span>{value}</span>
           </div>
         );
-      } /* else {
+      } else {
         settings.push(
-          <div key={index}>
+          <div key={index} className="my-1.5">
             <span>{setting}: </span>
             <span>{value.Now}</span>
           </div>
         );
-      } */
+      }
     });
 
     settingsCategories.push(
@@ -53,8 +55,13 @@ function SettingsPage() {
         key={index}
         className="text-black p-4 rounded-lg border-t-2 border-black"
       >
-        <span className="px-16">{category}</span>
-        <span className="my-2">{settings}</span>
+        <span
+          className="mx-32 px-8 mb-16 rounded-lg border-b-2 border-black"
+          style={{ fontSize: "23px" }}
+        >
+          {category}
+        </span>
+        <span className="my-4">{settings}</span>
       </div>
     );
   });
