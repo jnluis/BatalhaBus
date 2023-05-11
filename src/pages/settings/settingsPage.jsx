@@ -1,70 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import NavbarTitles from "./components/navbarTitles";
 import Settings from "./components/settings";
 import Navbar from "./components/navbar.jsx";
-import Off from "./components/Icons/Off.jsx";
-import On from "./components/Icons/On.jsx";
+import Switch from "./components/Switch";
+import SettingsSlider from "./components/SettingsSlider";
 
 function SettingsPage() {
   const values = {
     Appearance: {
       Theme: "Blue",
-      Brightness: "50%",
-      NightLight: <Off />,
+      Brightness: (
+        <SettingsSlider minLabel="0" maxLabel="100" ariaLabel="brightness" />
+      ),
+      NightLight: <Switch isOn={false} />,
     },
     TextNFont: {
       Font: "Arial",
-      FontSize: "14px",
-      ReadAloud: <Off />,
+      FontSize: (
+        <SettingsSlider minLabel="14" maxLabel="24" ariaLabel="FontSize" />
+      ),
+      ReadAloud: <Switch isOn={false} />,
     },
     Accessibility: {
-      ColourBlindMode: <Off />,
-      UnderlineLinks: <On />,
+      ColourBlindMode: <Switch isOn={false} />,
+      UnderlineLinks: <Switch isOn={true} />,
     },
     SoundNVideo: {
-      Volume: "50%",
-      Mute: <Off />,
-      AutoPlay: <Off />,
+      Volume: <SettingsSlider minLabel="0" maxLabel="100" ariaLabel="Volume" />,
+      Mute: <Switch isOn={false} />,
+      AutoPlay: <Switch isOn={false} />,
       OutputDevice: "Speakers",
     },
   };
-
-  const settingsCategories = [];
-  Object.keys(values).forEach((category, index) => {
-    const settings = [];
-    Object.entries(values[category]).forEach(([setting, value], index) => {
-      if (typeof value === "string") {
-        settings.push(
-          <div key={index} className="my-1.5">
-            <span>{setting}: </span>
-            <span>{value}</span>
-          </div>
-        );
-      } else {
-        settings.push(
-          <div key={index} className="my-1.5">
-            <span>{setting}: </span>
-            <span>{value.Now}</span>
-          </div>
-        );
-      }
-    });
-
-    settingsCategories.push(
-      <div
-        key={index}
-        className="text-black p-4 rounded-lg border-t-2 border-black"
-      >
-        <span
-          className="mx-32 px-8 mb-16 rounded-lg border-b-2 border-black"
-          style={{ fontSize: "23px" }}
-        >
-          {category}
-        </span>
-        <span className="my-4">{settings}</span>
-      </div>
-    );
-  });
 
   return (
     <div className="w-full h-full flex flex-col">
@@ -80,7 +47,27 @@ function SettingsPage() {
           />
         </div>
         <div className="basis-2/3 flex-nowrap pl-16 pr-8 overflow-auto">
-          {settingsCategories}
+          {Object.entries(values).map(([category, settings], index) => (
+            <div
+              key={index}
+              className="text-black p-4 rounded-lg border-t-2 border-black"
+            >
+              <span
+                className="mx-32 px-8 mb-16 rounded-lg border-b-2 border-black"
+                style={{ fontSize: "23px" }}
+              >
+                {category.replace("N", " & ")}
+              </span>
+              <div className="my-4">
+                {Object.entries(settings).map(([setting, value], index) => (
+                  <div key={index} className="my-1.5">
+                    <span>{setting}: </span>
+                    {typeof value === "string" ? <span>{value}</span> : value}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
