@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import ChildModal from "./ChildModal";
+import CloseButton from "../../../components/CloseButton";
 
 const style = {
   position: "absolute",
@@ -41,12 +42,18 @@ export default function TripModal() {
         aria-describedby="parent-modal-description"
       >
         <Box sx={{ ...style, width: 400, BorderRadius: "60px" }}>
-          <h1
-            style={{ fontSize: "24px", color: "black", fontWeight: "Bold" }}
-            className="mb-2"
-          >
-            My Full Trip
-          </h1>
+          <div className="flex justify-between">
+            <h1
+              style={{ fontSize: "24px", color: "black", fontWeight: "Bold" }}
+              className="mb-2"
+            >
+              My Full Trip
+            </h1>
+            <span className="justify-self-end">
+              <CloseButton handleClose={handleClose} />
+            </span>
+          </div>
+
           <p className="mb-2" style={{ color: "black" }}>
             Insert your ticket ID here:
           </p>
@@ -59,8 +66,8 @@ export default function TripModal() {
             style={{ color: "black" }}
           ></input>
           <p className="mb-2" style={{ color: "gray", fontSize: "14px" }}>
-            Tip: You can find your ticket ID in the from of the ticket below the
-            QR code
+            Tip: You can find your ticket ID in the front of the ticket, below
+            the QR code.
           </p>
           <ChildModal />
         </Box>
@@ -68,5 +75,3 @@ export default function TripModal() {
     </div>
   );
 }
-
-/* Button: <Button onClick={handleOpen}>Open modal</Button> */

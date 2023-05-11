@@ -5,6 +5,7 @@ import Bus from "./Icons/Bus";
 import Seat from "./Icons/Seat";
 import Switch from "./Icons/Switch";
 import Modal from "@mui/material/Modal";
+import CloseButton from "../../../components/CloseButton";
 
 const style = {
   position: "absolute",
@@ -49,15 +50,20 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={{ ...style }}>
-          <h1
-            style={{
-              fontSize: "24px",
-              color: "black",
-              fontWeight: "Bold",
-            }}
-          >
-            My Route
-          </h1>
+          <div className="flex justify-between">
+            <h1
+              style={{
+                fontSize: "24px",
+                color: "black",
+                fontWeight: "Bold",
+              }}
+            >
+              My Route
+            </h1>
+            <span className="justify-self-end">
+              <CloseButton handleClose={handleClose} />
+            </span>
+          </div>
           <div className="flex flex-nowrap flex-row mb-8">
             <div className="basis-full">
               <span>
