@@ -25,7 +25,7 @@ export default function TripModal() {
   const handleClose = () => {
     setOpen(false);
   };
-
+  
   return (
     <div>
       <button

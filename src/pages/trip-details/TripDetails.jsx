@@ -59,7 +59,6 @@ function TripDetails() {
       </div>
       <div className="ml-[290px] text-[24px]">
         {" "}
-        {/* mexer aquaaaaai quando se acrescentar o botão do TRIP ID */}
         <span className="text-white font-semibold  mt-[30px] ">
           Want to get information
           <br />

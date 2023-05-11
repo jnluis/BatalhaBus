@@ -7,7 +7,8 @@ import MediaButton from "./FooterComponents/MediaButton";
 import BrowserButton from "./FooterComponents/BrowserButton";
 import GamesButton from "./FooterComponents/GamesButton";
 import SettingsButton from "./FooterComponents/SettingsButton";
-import MusicPlayer from "../pages/home/components/MusicPlayer.jsx"
+import MusicPlayer from "../pages/home/components/MusicPlayer.jsx";
+import TimeTableModal from "./FooterComponents/TimeTableModal.jsx";
 
 
 
@@ -29,6 +30,10 @@ function Navbar() {
       <Link to="/"> 
       <HomeButton className={isHomePage ? "border-4 border-green-700" : 'border-2 border-black'}/>
       </Link>
+      {isHomePage && (
+        <TimeTableModal />
+      )}
+      
       {!isHomePage && (
         <Link to="/trip-details"> 
           <TripDetailsButton className={isTripDetailsPage ? 'border-4 border-green-700' : 'border-2 border-black'}/>
@@ -45,7 +50,7 @@ function Navbar() {
         </Link>
       )}
       {isHomePage && (
-        <MusicPlayer />
+        <MusicPlayer/>
       )}
       {!isHomePage && (
         <Link to="/games"> 

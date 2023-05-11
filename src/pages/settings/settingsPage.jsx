@@ -74,22 +74,6 @@ function SettingsPage() {
         </div>
         <div className="basis-2/3 flex-nowrap pl-16 pr-8 overflow-auto">
           {settingsCategories}
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
-          <div className="pl-16">q</div>
         </div>
       </div>
     </div>
