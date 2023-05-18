@@ -17,12 +17,10 @@ function Home() {
     borderRadius: "10px",
     backgroundColor: "#E6B78C",
     color: "black",
-    //display: 'inline-flex',
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
     fontSize: "22px",
-    color: "black",
     font: "normal normal bold 22px/27px Poppins",
   };
 
@@ -30,18 +28,20 @@ function Home() {
     display: "flex",
     marginLeft: "85px",
     position: "relative",
-    top: "85px",
+    top: "45px",
   };
 
   return (
     <>
-      <div className="fixed top-[30px] right-[80px] tem de mexer aqui depois de se tirar aquela merda de ser scrollable">
+      <div className="fixed top-[30px] right-[80px]">
         <Weather />
       </div>
       <div className="fixed top-[370px] right-10 h-200 flex flex-col justify-center items-center">
         <Slider />
       </div>
-      <div className="ml-32">
+      <div className="ml-32 mt-[-20px]">
+        <span style={{ color: "#FFFFFF", fontWeight: 500, fontSize: 22 }}>Current Bus: 5
+        </span>
         <Typography sx={{ display: "flex" }}>
           <span style={{ color: "#FFFFFF", fontWeight: 700, fontSize: 24 }}>
             FROM:{" "}
@@ -61,6 +61,12 @@ function Home() {
       <div className="ml-36 mt-5">
         <ProgressBar />
       </div>
+      <div style={{ color: "#FFFFFF", fontSize: 17, marginTop:5, marginLeft:120 }}>
+      <p>
+      More details about your trip in the Trip Details page
+      </p> 
+      </div>
+     
 
       <div style={buttonDivStyle}>
         <Link to="/trip-details">

@@ -4,6 +4,7 @@ import Music from "../../../assets/OLimpaChamines.mp3"
 import { PlayArrow, Pause, FastForward } from '@mui/icons-material';
 import "./MusicPlayer.css";
 import jonyclaras from "../../../assets/jonyclaras.jpg"
+import speakers from "../../../assets/speakers.svg"
 
 export default function Player() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -90,6 +91,10 @@ export default function Player() {
         <div>
         <p className="subTitle">O Limpa Chaminés</p>
         <h3 className="title">João Claro</h3>
+          <h6 className="Playing inline-flex">
+            Playing in: <a style={{fontWeight:"Bold"}}> Speakers</a>
+          <img className="icon" src={speakers} /> 
+          </h6> 
       </div>
       </div>
       <div className="buttons">

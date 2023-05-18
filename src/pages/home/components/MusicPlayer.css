@@ -57,6 +57,19 @@
   font-weight: 300;
 }
 
+.Playing {
+  color: #191D23;
+  font-weight: 300;
+  font-size: 15px;
+  margin-left:10px;
+}
+
+
+.icon {
+  width: 37px;
+  height: 25px;
+}
+
 .time {
   margin-top: 20px;
   margin-left: 10px;
