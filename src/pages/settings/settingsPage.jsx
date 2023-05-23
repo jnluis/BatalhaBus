@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import NavbarTitles from "./components/navbarTitles";
-import Settings from "./components/settings";
 import Navbar from "./components/navbar.jsx";
 import Switch from "./components/Switch";
 import SettingsSlider from "./components/SettingsSlider";

@@ -9,10 +9,10 @@ const On = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_177_3781)">
+      <g clipPath="url(#clip0_177_3781)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M18 34.993C17.8339 34.9977 17.6672 35 17.5 35C7.83502 35 0 27.165 0 17.5C0 7.83502 7.83502 0 17.5 0C17.6672 0 17.8339 0.00234552 18 0.00700546V0H53V0.00700546C53.1661 0.00234552 53.3328 0 53.5 0C63.165 0 71 7.83502 71 17.5C71 27.165 63.165 35 53.5 35C53.3328 35 53.1661 34.9977 53 34.993V35H18V34.993Z"
           fill="#04CA00"
         />

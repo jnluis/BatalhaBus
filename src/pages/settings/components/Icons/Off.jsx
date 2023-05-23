@@ -10,10 +10,10 @@ const Off = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_177_3995)">
-        <g clip-path="url(#clip0_177_3995)">
+        <g clipPath="url(#clip0_177_3995)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M22 34.993C21.8339 34.9977 21.6672 35 21.5 35C11.835 35 4 27.165 4 17.5C4 7.83502 11.835 0 21.5 0C21.6672 0 21.8339 0.00234552 22 0.00700546V0H57V0.00700546C57.1661 0.00234552 57.3328 0 57.5 0C67.165 0 75 7.83502 75 17.5C75 27.165 67.165 35 57.5 35C57.3328 35 57.1661 34.9977 57 34.993V35H22V34.993Z"
             fill="#C20303"
           />
@@ -32,9 +32,9 @@ const Off = () => {
           width="79"
           height="43"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
