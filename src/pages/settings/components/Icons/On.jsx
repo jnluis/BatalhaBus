@@ -4,8 +4,8 @@ const On = () => {
   return (
     <svg
       width="71"
-      height="35"
-      viewBox="0 0 71 35"
+      height="43"
+      viewBox="0 0 71 43"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
