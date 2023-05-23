@@ -6,29 +6,63 @@ import Switch from "./components/Switch";
 import SettingsSlider from "./components/SettingsSlider";
 
 function SettingsPage() {
+  const [nightLightSwitch, setNightLightSwitch] = useState(false);
+  const [readAloudSwitch, setReadAloudSwitch] = useState(false);
+  const [colourBlindModeSwitch, setColourBlindModeSwitch] = useState(false);
+  const [underlineLinksSwitch, setUnderlineLinksSwitch] = useState(false);
+  const [muteSwitch, setMuteSwitch] = useState(false);
+  const [autoPlaySwitch, setAutoPlaySwitch] = useState(false);
+
   const values = {
     Appearance: {
       Theme: "Blue",
       Brightness: (
         <SettingsSlider minLabel="0" maxLabel="100" ariaLabel="brightness" />
       ),
-      NightLight: <Switch isOn={false} />,
+      NightLight: (
+        <Switch
+          isOn={nightLightSwitch}
+          onToggle={() => setNightLightSwitch(!nightLightSwitch)}
+        />
+      ),
     },
     TextNFont: {
       Font: "Arial",
       FontSize: (
         <SettingsSlider minLabel="14" maxLabel="24" ariaLabel="FontSize" />
       ),
-      ReadAloud: <Switch isOn={false} />,
+      ReadAloud: (
+        <Switch
+          isOn={readAloudSwitch}
+          onToggle={() => setReadAloudSwitch(!readAloudSwitch)}
+        />
+      ),
     },
     Accessibility: {
-      ColourBlindMode: <Switch isOn={false} />,
-      UnderlineLinks: <Switch isOn={true} />,
+      ColourBlindMode: (
+        <Switch
+          isOn={colourBlindModeSwitch}
+          onToggle={() => setColourBlindModeSwitch(!colourBlindModeSwitch)}
+        />
+      ),
+      UnderlineLinks: (
+        <Switch
+          isOn={underlineLinksSwitch}
+          onToggle={() => setUnderlineLinksSwitch(!underlineLinksSwitch)}
+        />
+      ),
     },
     SoundNVideo: {
       Volume: <SettingsSlider minLabel="0" maxLabel="100" ariaLabel="Volume" />,
-      Mute: <Switch isOn={false} />,
-      AutoPlay: <Switch isOn={false} />,
+      Mute: (
+        <Switch isOn={muteSwitch} onToggle={() => setMuteSwitch(!muteSwitch)} />
+      ),
+      AutoPlay: (
+        <Switch
+          isOn={autoPlaySwitch}
+          onToggle={() => setAutoPlaySwitch(!autoPlaySwitch)}
+        />
+      ),
       OutputDevice: "Speakers",
     },
   };
@@ -54,15 +88,21 @@ function SettingsPage() {
             >
               <span
                 className="mx-32 px-8 mb-16 rounded-lg border-b-2 border-black"
-                style={{ fontSize: "23px" }}
+                style={{ fontSize: "34px" }}
               >
                 {category.replace("N", " & ")}
               </span>
-              <div className="my-4">
+              <div className="my-4" style={{ fontSize: "24px" }}>
                 {Object.entries(settings).map(([setting, value], index) => (
                   <div key={index} className="my-1.5">
                     <span>{setting}: </span>
-                    {typeof value === "string" ? <span>{value}</span> : value}
+                    {typeof value === "string" ? (
+                      <span>
+                        <b>{value}</b>
+                      </span>
+                    ) : (
+                      value
+                    )}
                   </div>
                 ))}
               </div>
