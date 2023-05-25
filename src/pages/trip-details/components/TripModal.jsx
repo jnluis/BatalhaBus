@@ -30,10 +30,10 @@ export default function TripModal() {
   return (
     <div>
       <button
-        className="font-bold w-[274px] h-[64px] text-black text-[24px] bg-[#259D49] border-[#3ED26A] border-4 rounded-[10px]"
+        className="font-bold w-[300px] h-[80px] text-black text-[24px] bg-[#259D49] border-[#3ED26A] border-4 rounded-[10px]"
         onClick={handleOpen}
       >
-        INSERT TICKET ID
+        Full Route Details
       </button>
       <Modal
         open={open}
